@@ -149,12 +149,16 @@
             while ($row = mysqli_fetch_array($result)) 
             {
                 $deadline = strtotime($row['timer']);
+		    
+		$current = time();
 
-                date_default_timezone_set('Asia/Kolkata');
-                $current = date("y-m-d H:i:s");
-                $current = strtotime($current);
-
-                $diff = $deadline-$current;
+                $diff = $deadline - $current -12600;
+		/*
+		 * if rows are not highlited even though deadline
+		   is passed then use below variable, 
+		   as there might be delay of 3.5 hours(12600 s) in time()
+		*/
+		// $diff = $deadline - $current;
                 if ($diff < 0)
                 {
                     echo "<tr id = 'row-color'>";

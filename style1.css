@@ -1,0 +1,8 @@
+form button {
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+}
+form button:hover {
+    cursor: pointer;
+}

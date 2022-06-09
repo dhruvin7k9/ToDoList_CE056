@@ -78,7 +78,12 @@
         #row-color {
             background : tomato;
         }
-
+	
+	#main h2 {
+            margin-left: 22%;
+            margin-top: -48%;
+        }
+	    
         table {
           margin-left : 20.2%;
           margin-top : -50%;
